@@ -6,7 +6,7 @@ document.head.appendChild(style);
 var font = document.createElement('style');
 font.innerHTML = `
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-pre * { font-family: 'Ubuntu Mono', monospace; }`;
+code * { font-family: 'Ubuntu Mono', monospace; }`;
 document.body.appendChild(font);
 
 var hl = document.createElement('script');

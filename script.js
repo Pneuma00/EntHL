@@ -16,6 +16,6 @@ document.head.appendChild(hl);
 var content = document.querySelector('.discussContentPlain > div');
 content.innerHTML = content.innerHTML
     .replace(/&lt;code(\/[a-zA-Z]+)?&gt;\n/g, match => `<pre class="${match.slice(8, -5) ? match.slice(9, -5) : 'plaintext'}"><code>`)
-    .replace(/&lt;\/code&gt;\n/g, '</code></pre>');
+    .replace(/&lt;\/code&gt;/g, '</code></pre>');
 
 hl.addEventListener('load', () => { hljs.initHighlighting() });

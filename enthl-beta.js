@@ -10,6 +10,21 @@
  */
 
 (() => {
+    // Credit & Info
+    console.log(
+`
+%c ______         _    _    _  _      
+|  ____|       | |  | |  | || | Made
+| |__    _ __  | |_ | |__| || | By
+|  __|  | '_ \\ | __||  __  || | Pneuma
+| |____ | | | || |_ | |  | || |____
+|______||_| |_| \\__||_|  |_||______|
+
+Github: https://github.com/Pneuma714/EntHL
+How To Use: https://pneuma714.github.io/EntHL`,
+    'color: #32d27d');
+
+    // Variables
     let index = localStorage.enthltheme ? parseInt(localStorage.enthltheme) : 0;
 
     const themeset = [ 'atom-one-dark', 'atom-one-light', 'solarized-dark', 'solarized-light' ];
@@ -44,6 +59,7 @@
             '</code></pre></div>'
         );
 
+    // After Load
     hl.addEventListener('load', () => {
         hljs.initHighlighting();
 

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+code * {
+    font-family: 'Ubuntu Mono', monospace;
+    position: relative;
+}
+
+.copyButton {
+    position: absolute;
+    margin-top: -2px;
+    margin-left: 642px;
+    width: 12px;
+    height: 12px;
+    border-style: none;
+    border-radius: 50%;
+    background-image: url('https://i.imgur.com/JYHe5FH.png');
+    background-size: cover;
+}
+
+.themeButton {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 658px;
+    width: 8px;
+    height: 8px;
+    border-style: none;
+    border-radius: 50%; 
+}

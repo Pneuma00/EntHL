@@ -26,6 +26,7 @@ How To Use: https://pneuma714.github.io/EntHL`,
     'color: #32d27d; font-weight: bold;', '');
 
     console.log('%c[EntHL] %cApplying EntHL..', 'color: #32d27d; font-weight: bold;', '');
+    
     // Variables
     let index = localStorage.enthltheme ? parseInt(localStorage.enthltheme) : 0;
 

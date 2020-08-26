@@ -10,6 +10,8 @@
  */
 
 (() => {
+    let index = localStorage.enthltheme ? parseInt(localStorage.enthltheme) : 0;
+
     const themeset = [ 'atom-one-dark', 'atom-one-light', 'solarized-dark', 'solarized-light' ];
     const colorset = [ '#fafafa', '#002b36', '#fdf6e3', '#282c34' ];
 
@@ -22,7 +24,7 @@
     // hljs CSS Link
     let hlcss = document.createElement('link');
     hlcss.rel = 'stylesheet';
-    hlcss.href = `//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/${themeset[0]}.min.css`;
+    hlcss.href = `//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/${themeset[index]}.min.css`;
     document.head.appendChild(hlcss);
 
     // hljs JS Inject
@@ -42,8 +44,6 @@
             '</code></pre></div>'
         );
 
-    let index = 0;
-
     hl.addEventListener('load', () => {
         hljs.initHighlighting();
 
@@ -52,9 +52,6 @@
 
         copyButtons.forEach(button => {            
             button.addEventListener('click', () => {
-                button.title = 'Copied!';
-                setTimeout(() => { button.title = 'Copy Code'; }, 1500);
-
                 let tempElem = document.createElement('textarea');
                 tempElem.value = button.parentElement.innerText;
                 document.body.appendChild(tempElem);
@@ -70,10 +67,10 @@
             
             button.addEventListener('click', () => {
                 index = (index + 1) % 4;
+                localStorage.enthltheme = index;
                 themeButtons.forEach(b => { b.style.backgroundColor = colorset[index] });
-                style.href = `//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/${themeset[index]}.min.css`;
+                hlcss.href = `//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/${themeset[index]}.min.css`;
             });
-
         });
     });
 })();

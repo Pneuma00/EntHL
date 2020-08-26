@@ -20,10 +20,12 @@
 | |____ | | | || |_ | |  | || |____
 |______||_| |_| \\__||_|  |_||______|
 
-Github: https://github.com/Pneuma714/EntHL
+Entry Community Article Code Highlighter
+%cGithub: https://github.com/Pneuma714/EntHL
 How To Use: https://pneuma714.github.io/EntHL`,
-    'color: #32d27d');
+    'color: #32d27d; font-weight: bold;', '');
 
+    console.log('%c[EntHL] %cApplying EntHL..', 'color: #32d27d; font-weight: bold;', '');
     // Variables
     let index = localStorage.enthltheme ? parseInt(localStorage.enthltheme) : 0;
 
@@ -75,6 +77,8 @@ How To Use: https://pneuma714.github.io/EntHL`,
                 tempElem.select();
                 document.execCommand("copy");
                 document.body.removeChild(tempElem);
+
+                console.log(`%c[EntHL] %cCopied code to clipboard.`, 'color: #32d27d; font-weight: bold;', '')
             });
         });
 
@@ -84,9 +88,14 @@ How To Use: https://pneuma714.github.io/EntHL`,
             button.addEventListener('click', () => {
                 index = (index + 1) % 4;
                 localStorage.enthltheme = index;
+
                 themeButtons.forEach(b => { b.style.backgroundColor = colorset[index] });
                 hlcss.href = `//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/${themeset[index]}.min.css`;
+
+                console.log(`%c[EntHL] %cTheme changed. (${themeset[index]})`, 'color: #32d27d; font-weight: bold;', '')
             });
         });
+
+        console.log('%c[EntHL] %cCompleted!', 'color: #32d27d; font-weight: bold;', '')
     });
 })();

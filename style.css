@@ -17,17 +17,6 @@ code * {
     background-size: cover;
 }
 
-.copyButton:hover::after {
-    position: absolute;
-    content: 'Copy Code';
-    bottom: -2.5em;
-    right: -1em;
-    background-color: #333;
-    color: white;
-    padding: .25em .5em;
-    font-size: .8em;
-}
-
 .themeButton {
     position: absolute;
     margin-top: 0px;
